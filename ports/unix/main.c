@@ -52,6 +52,9 @@
 #include "genhdr/mpversion.h"
 #include "input.h"
 
+#include "driver_framebuffer.h"
+#include "sdl.h"
+
 // Command line options, with their defaults
 STATIC bool compile_only = false;
 STATIC uint emit_opt = MP_EMIT_OPT_NONE;
@@ -419,6 +422,8 @@ STATIC void set_sys_argv(char *argv[], int argc, int start_arg) {
 MP_NOINLINE int main_(int argc, char **argv);
 
 int main(int argc, char **argv) {
+    sdlInit();
+    driver_framebuffer_init();
     #if MICROPY_PY_THREAD
     mp_thread_init();
     #endif
