@@ -6,8 +6,8 @@
 #include "sdl.h"
 
 #ifdef CONFIG_DRIVER_FRAMEBUFFER_ENABLE
-    #define FB_WIDTH 800
-    #define FB_HEIGHT 600
+    #define FB_WIDTH 320
+    #define FB_HEIGHT 240
     #define FB_SIZE FB_WIDTH * FB_HEIGHT * 3
     #define FB_TYPE_24BPP
     #define PIXEL_SIZE 24
